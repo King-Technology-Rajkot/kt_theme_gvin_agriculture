@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div id="navbar" class="sticky top-0 z-50"></div>
+
+<script>
+
+fetch("../navbar.html")
+.then(res => res.text())
+.then(data => {
+
+document.getElementById("navbar").innerHTML = data;
+
+
+/* MOBILE MENU OPEN CLOSE */
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+if(menuBtn){
+menuBtn.addEventListener("click", () => {
+mobileMenu.classList.remove("translate-x-full");
+});
+}
+
+if(closeMenu){
+closeMenu.addEventListener("click", () => {
+mobileMenu.classList.add("translate-x-full");
+});
+}
+
+
+/* DROPDOWN MENU */
+
+const dropdownBtns = document.querySelectorAll(".dropdownBtn");
+
+dropdownBtns.forEach(btn => {
+
+btn.addEventListener("click", () => {
+
+const dropdown = btn.nextElementSibling;
+
+dropdown.classList.toggle("hidden");
+
+});
+
+});
+
+});
+
+</script>
+<section class="relative w-full h-[400px] md:h-[600px] overflow-hidden">
+
+  <!-- Background Image -->
+  <img 
+    src="../src/product_header.jpg" 
+    alt="About Banner"
+    class="absolute inset-0 w-full h-full object-cover"
+  >
+
+  <!-- Overlay Layer -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-green-900/60 to-black/50"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+    
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+SOIL NUTRIENTS
+    </h1>
+
+    <p class="text-lg md:text-xl font-medium">
+      Home
+    </p>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto py-16 px-4">
+
+<!-- Search + Filter -->
+<div class="flex justify-between items-center mb-12 flex-wrap gap-6">
+
+<div class="flex w-[350px] max-w-full">
+<input type="text" placeholder="Search Product"
+class="w-full p-4 bg-gray-200 outline-none">
+
+<button class="bg-[#6A961F] px-6 text-white">
+<i class="ri-search-line"></i>
+</button>
+</div>
+
+<select class="border p-4">
+<option>SOIL NUTRIENTS</option>
+<option>FERTILIZER</option>
+</select>
+
+</div>
+
+
+<!-- Products Grid -->
+<div id="productContainer" class="grid md:grid-cols-3 gap-10">
+
+
+<!-- CARD -->
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/XZyHR4qn1772281959__product.jpg" class="mx-auto mb-6">
+
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+
+<div class="bg-[#6A961F] text-white py-3 font-semibold">
+FERRO SULF
+</div>
+</div>
+
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/appe1Xun1772278612__product.jpg" class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">GV ZINC</div>
+</div>
+
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/fk0d9ZZP1772279125__product.jpg" class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">JIVI MAG</div>
+</div>
+
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/vbOZoGUv1772279283__product.jpg" class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">ZINC SPARK</div>
+</div>
+
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/FCOg7jIv1772279591__product.jpg" class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">POSHAN AMRUT</div>
+</div>
+
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/wcVNYAQ11772279932__product.jpg" class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">ORGO CALC</div>
+</div>
+
+
+<!-- extra cards -->
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/mETdqbtB1772280095__product.jpg" class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">ROCK STAR</div>
+</div>
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/aZFJRS3O1772456415__product.jpg "class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">SUPER CALC</div>
+</div>
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/hKJIGgj91772186521__product.jpg" class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">BLACK BOLD</div>
+</div>
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/W2UAQehv1772255123__product.jpg" class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">JIVANT POTASH</div>
+</div>
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/Dm2YQ6vI1772255567__product.jpg" class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">JIVANT NPK</div>
+</div>
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/RDRgut1s1772255868__product.jpg" class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">JIVANT ZSB</div>
+</div>
+
+
+<!-- second page cards -->
+
+<div class="productCard bg-white border p-8 text-center relative group">
+<img src="../src/Gr4tzV9l1762152106__product.jpg" class="mx-auto mb-6">
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition">
+<i class="ri-eye-line text-white text-3xl"></i>
+</div>
+<div class="bg-[#6A961F] text-white py-3 font-semibold">SULFEX 90</div>
+</div>
+
+</div>
+
+
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-4 mt-16">
+
+<button id="prevBtn" class="bg-[#6A961F] text-white px-6 py-3 rounded-full hidden">
+← Previous
+</button>
+
+<button id="page1" class="pageBtn w-12 h-12 rounded-full bg-[#6A961F] text-white">
+1
+</button>
+
+<button id="page2" class="pageBtn w-12 h-12 rounded-full border">
+2
+</button>
+
+<button id="nextBtn" class="bg-[#6A961F] text-white px-6 py-3 rounded-full flex items-center gap-2">
+Next →
+</button>
+
+</div>
+
+</section>
+
+<footer class="w-full mt-[50px]">
+
+
+
+ <div class="bg-[#083a02] text-white py-16 relative overflow-hidden">
+
+<!-- leaf background -->
+<div class="absolute right-0 top-0 opacity-10">
+<img src="/src/footer_leaf.png" class="w-[400px]">
+</div>
+
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-12 relative z-10">
+
+
+<!-- Corporate Office -->
+
+<div class="md:ml-[70px]">
+<h3 class="text-2xl font-semibold mb-6">Corporate Office</h3>
+
+<p class="text-gray-200 leading-7">
+"Gvin Group" 206 , Rajpath Avenue,<br>
+Opp. Tapovan School, 150 Feet Ring Road,<br>
+Rajkot 360004.
+</p>
+
+<p class="flex items-center gap-2 mt-6 text-lg">
+<i class="ri-phone-fill"></i>
+(+91) 70432 43200
+</p>
+
+</div>
+
+
+<!-- Reach to us -->
+
+<div>
+
+<h3 class="text-2xl font-semibold mb-6">
+Reach to Us Easily
+</h3>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+<div>
+
+<p class="mb-2">
+Helpline & WhatsApp
+</p>
+
+<p class="text-sm mb-4">(For Gujarat only)</p>
+
+<p class="flex items-center gap-2 mb-6">
+<i class="ri-phone-fill"></i>
+(+91) 70432 43200
+</p>
+
+<p class="mb-2">
+Helpline & WhatsApp
+</p>
+
+<p class="text-sm mb-4">(For out of Gujarat)</p>
+
+<p class="flex items-center gap-2">
+<i class="ri-phone-fill"></i>
+(+91) 95102 82007
+</p>
+
+</div>
+
+
+<div class="space-y-4">
+
+<p class="flex items-center gap-2 break-all">
+<i class="ri-mail-fill"></i>
+gvinproductsltd@gmail.com
+</p>
+
+<p class="flex items-center gap-2 break-all">
+<i class="ri-mail-fill"></i>
+social@gvingroup.com
+</p>
+
+<p class="flex items-center gap-2 break-all">
+<i class="ri-mail-fill"></i>
+social.gvingroup@gmail.com
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Connect -->
+
+<div>
+  <h3 class="text-2xl font-semibold mb-6 md:ml-[80px]">
+    Connect with Us
+  </h3>
+
+<div class="flex flex-wrap gap-2 max-w-[170px] md:ml-[80px]">
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-facebook-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-instagram-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-youtube-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-twitter-x-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-linkedin-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-map-pin-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-pinterest-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-telegram-fill text-sm"></i>
+  </div>
+
+</div>
+</div>
+
+
+</div>
+
+
+<!-- COPYRIGHT -->
+
+<div class="border-t border-green-900 mt-12 pt-6 text-center text-gray-300 text-sm">
+
+© Copyright 2022 G-Vin Group. All rights reserved. Developed By 
+<span class="text-[#8BC34A]">PixelX Technology</span>
+
+</div>
+
+
+</div>
+</footer>
+<script>
+const cards = document.querySelectorAll(".productCard")
+const perPage = 12
+let currentPage = 1
+
+const page1 = document.getElementById("page1")
+const page2 = document.getElementById("page2")
+const nextBtn = document.getElementById("nextBtn")
+const prevBtn = document.getElementById("prevBtn")
+
+function showPage(page){
+
+currentPage = page
+
+cards.forEach((card,index)=>{
+
+card.style.display="none"
+
+if(index >= (page-1)*perPage && index < page*perPage){
+card.style.display="block"
+}
+
+})
+
+page1.classList.remove("bg-[#6A961F]","text-white")
+page2.classList.remove("bg-[#6A961F]","text-white")
+
+if(page === 1){
+page1.classList.add("bg-[#6A961F]","text-white")
+prevBtn.classList.add("hidden")
+}else{
+page2.classList.add("bg-[[#6A961F]","text-white")
+prevBtn.classList.remove("hidden")
+}
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+})
+
+}
+
+page1.onclick=()=>showPage(1)
+page2.onclick=()=>showPage(2)
+
+nextBtn.onclick=()=>{
+if(currentPage<2){
+showPage(currentPage+1)
+}
+}
+
+prevBtn.onclick=()=>{
+if(currentPage>1){
+showPage(currentPage-1)
+}
+}
+
+showPage(1)
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<div id="navbar" class="sticky top-0 z-50"></div>
+
+<script>
+
+fetch("navbar.html")
+.then(res => res.text())
+.then(data => {
+
+document.getElementById("navbar").innerHTML = data;
+
+// navbar load thai gaya pachi JS attach
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+if(menuBtn){
+menuBtn.addEventListener("click", () => {
+mobileMenu.classList.remove("translate-x-full");
+});
+}
+
+if(closeMenu){
+closeMenu.addEventListener("click", () => {
+mobileMenu.classList.add("translate-x-full");
+});
+}
+
+});
+
+
+const dropdownBtns = document.querySelectorAll(".dropdownBtn");
+
+dropdownBtns.forEach((btn)=>{
+
+btn.addEventListener("click",()=>{
+
+const menu = btn.nextElementSibling;
+
+menu.classList.toggle("hidden");
+
+});
+
+});
+
+
+</script>
+
+<section class="relative w-full h-[400px] md:h-[600px] overflow-hidden">
+
+  <!-- Background Image -->
+  <img 
+    src="/src/about_header.jpg" 
+    alt="Career Banner"
+    class="absolute inset-0 w-full h-full object-cover object-center"
+  >
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-green-900/60 to-black/50"></div>
+
+  <!-- Center Content -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+    
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+About Us
+    </h1>
+
+    <p class="text-base md:text-lg font-medium">
+      Home
+    </p>
+
+  </div>
+
+</section>
+
+<section class=" py-16">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Top Paragraph -->
+    <div class="max-w-5xl text-[15px] text-gray-700 leading-7 space-y-4">
+      <p>
+        Manufacturing of various types of Fertilizers like Bio Fertilizers, 
+        Organic Fertilizers, Water Soluble and Chelated Micronutrients for 
+        Soil Application, Drip Irrigation and Foliar Spray.
+      </p>
+
+      <p>
+        Also Manufacturing of Plant Growth Regulator (PGR), Plant Growth Promoter (PGP), 
+        Bio Insecticide, Bio Pesticides, Bio Fungicide and Bio Nematicide for Plant Protection.
+      </p>
+    </div>
+
+    <!-- Two Columns -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mt-14">
+
+      <!-- Left Column -->
+      <div>
+        <h2 class="text-2xl font-bold text-green-900 mb-6 tracking-wide">
+          GVIN PRODUCTS LIMITED
+        </h2>
+
+        <ul class="space-y-3 text-[15px] text-gray-600 leading-7 list-disc pl-5">
+          <li>Operative in agriculture field since 2010.</li>
+          <li>Authorised by ISO 9001 : 2015 certified.</li>
+          <li>Efficient and Quality Products that give farmers more production at lower cost.</li>
+          <li>Products that differ from other traditional fertilizers and give excellent results.</li>
+          <li>Experienced team of experts in agriculture for decades.</li>
+          <li>Products that have passed in quality test in field and laboratory.</li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div>
+        <h2 class="text-2xl font-bold text-green-900 mb-6 tracking-wide">
+          GVIN KRUSHI LINK
+        </h2>
+
+        <ul class="space-y-3 text-[15px] text-gray-600 leading-7 list-disc pl-5">
+          <li>Seeds are prepared with the recommendation of Agri scientists.</li>
+          <li>Indigenous, hybrid and researched variety of seeds for maximum yield.</li>
+          <li>Best variety of wheat, cotton, castor, sesame, cumin, mustard, mung and millets.</li>
+          <li>Seeds produced under the constant observation of experts.</li>
+          <li>Reliable seeds from experienced farmers for many years.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="w-full">
+
+
+ <div class="bg-[#083a02] text-white py-16 relative overflow-hidden">
+
+<!-- leaf background -->
+<div class="absolute right-0 top-0 opacity-10">
+<img src="/src/footer_leaf.png" class="w-[400px]">
+</div>
+
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-12 relative z-10">
+
+
+<!-- Corporate Office -->
+
+<div class="md:ml-[70px]">
+<h3 class="text-2xl font-semibold mb-6">Corporate Office</h3>
+
+<p class="text-gray-200 leading-7">
+"Gvin Group" 206 , Rajpath Avenue,<br>
+Opp. Tapovan School, 150 Feet Ring Road,<br>
+Rajkot 360004.
+</p>
+
+<p class="flex items-center gap-2 mt-6 text-lg">
+<i class="ri-phone-fill"></i>
+(+91) 70432 43200
+</p>
+
+</div>
+
+
+<!-- Reach to us -->
+
+<div>
+
+<h3 class="text-2xl font-semibold mb-6">
+Reach to Us Easily
+</h3>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+<div>
+
+<p class="mb-2">
+Helpline & WhatsApp
+</p>
+
+<p class="text-sm mb-4">(For Gujarat only)</p>
+
+<p class="flex items-center gap-2 mb-6">
+<i class="ri-phone-fill"></i>
+(+91) 70432 43200
+</p>
+
+<p class="mb-2">
+Helpline & WhatsApp
+</p>
+
+<p class="text-sm mb-4">(For out of Gujarat)</p>
+
+<p class="flex items-center gap-2">
+<i class="ri-phone-fill"></i>
+(+91) 95102 82007
+</p>
+
+</div>
+
+
+<div class="space-y-4">
+
+<p class="flex items-center gap-2 break-all">
+<i class="ri-mail-fill"></i>
+gvinproductsltd@gmail.com
+</p>
+
+<p class="flex items-center gap-2 break-all">
+<i class="ri-mail-fill"></i>
+social@gvingroup.com
+</p>
+
+<p class="flex items-center gap-2 break-all">
+<i class="ri-mail-fill"></i>
+social.gvingroup@gmail.com
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Connect -->
+
+<div>
+  <h3 class="text-2xl font-semibold mb-6 md:ml-[80px]">
+    Connect with Us
+  </h3>
+
+<div class="flex flex-wrap gap-2 max-w-[170px] md:ml-[80px]">
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-facebook-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-instagram-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-youtube-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-twitter-x-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-linkedin-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-map-pin-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-pinterest-fill text-sm"></i>
+  </div>
+
+  <div class="w-9 h-9 bg-[#6B8E23] rounded-full flex items-center justify-center hover:scale-110 transition">
+    <i class="ri-telegram-fill text-sm"></i>
+  </div>
+
+</div>
+</div>
+
+
+</div>
+
+
+<!-- COPYRIGHT -->
+
+<div class="border-t border-green-900 mt-12 pt-6 text-center text-gray-300 text-sm">
+
+© Copyright 2022 G-Vin Group. All rights reserved. Developed By 
+<span class="text-[#8BC34A]">PixelX Technology</span>
+
+</div>
+
+
+</div>
+
+</footer>
+
+<a href="#" 
+   class="fixed left-6 bottom-6 bg-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition z-50">
+
+   <i class="ri-whatsapp-fill text-white text-2xl"></i>
+</a>
+    <script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("translate-x-full");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ <nav class="w-full bg-white border-b sticky top-0 z-50">
+<div class="max-w-8xl mx-auto flex items-center justify-between pl-3 pr-28 h-20 relative">
+   <!-- Logo Section -->
+<div class="flex items-center gap-2">
+  <img src="/src/logo (2).png" alt="logo" class="w-15 h-15">
+</div>
+
+<!-- Mobile Icons -->
+<div class="flex items-center gap-4 lg:hidden ml-auto">
+
+  <!-- Hamburger -->
+  <button id="menuBtn">
+    <i class="ri-menu-line text-2xl text-[#6A961F]"></i>
+  </button>
+
+  <!-- Search -->
+  <button class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center">
+    <i class="ri-search-line text-base text-[#0D3C00]"></i>
+  </button>
+
+</div>
+
+    <!-- Menu -->
+   <ul class="hidden lg:flex items-center gap-10 text-[17px] font-medium relative">
+
+
+      <!-- Home (Active) -->
+     <li class="relative group">
+    <a href="/Home.html" class="text-[#0D3C00] hover:text-[#6A961F] relative py-2 transition duration-300">
+      Home
+      <span class="absolute left-0 top-0 w-0 h-[2px] bg-[#6A961F] transition-all duration-300 group-hover:w-full"></span>
+    </a>
+  </li>
+
+      <!-- About -->
+     <li class="relative group">
+    <a href="/aboutus.html" class="text-[#0D3C00] hover:text-[#6A961F] relative py-2 transition duration-300">
+      About Us
+      <span class="absolute left-0 top-0 w-0 h-[2px] bg-[#6A961F] transition-all duration-300 group-hover:w-full"></span>
+    </a>
+  </li>
+      <!-- Products with Dropdown -->
+<li class="relative group">
+
+<button class="flex items-center gap-1 text-[#0D3C00] hover:text-[#6A961F] transition duration-300 py-2">
+Products 
+<i class="ri-arrow-down-s-line"></i>
+</button>
+
+<div class="absolute left-0 top-full w-44 bg-white shadow-lg rounded-md
+opacity-0 invisible group-hover:opacity-100 group-hover:visible
+transition duration-300 z-50">
+
+<a href="../product/soil.html" class="block px-4 py-2 hover:bg-gray-100">SOIL NUTRIENTS</a>
+<a href="../product/kit.html" class="block px-4 py-2 hover:bg-gray-100">KIT SERIES</a>
+<a href="../product/water.html" class="block px-4 py-2 hover:bg-gray-100">WATER SOLUBLE NUTRIENTS</a>
+<a href="../product/liquid.html" class="block px-4 py-2 hover:bg-gray-100">LIQUID NUTRIENTS</a>
+<a href="../product/pgp.html" class="block px-4 py-2 hover:bg-gray-100">PGR-PGR-STICKER</a>
+<a href="../product/bio.html" class="block px-4 py-2 hover:bg-gray-100">BIO FERTILIZER PESTICIDIES</a>
+<a href="../product/research.html" class="block px-4 py-2 hover:bg-gray-100">RESEARCH AND HYBRID SEEDS</a>
+</div>
+
+</li>
+
+      <!-- Multimedia -->
+          <div class="relative group">
+          <button class="flex items-center gap-1 text-[#0D3C00] hover:text-[#6A961F] transition duration-300 py-2">
+            Multimedia
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+
+          <div class="absolute left-0 top-full w-44 bg-white shadow-lg rounded-md
+opacity-0 invisible group-hover:opacity-100 group-hover:visible
+transition duration-300 z-50">
+  
+            <a href="../multimedia/krishi.html" class="block px-4 py-2 hover:bg-gray-100">Krishi Gyan</a>
+            <a href="../multimedia/our.html" class="block px-4 py-2 hover:bg-gray-100">Our Activities</a>
+          </div>
+        </div>
+
+      <!-- Career -->
+      <li class="relative group">
+        <a href="/career.html" class="text-[#0D3C00] hover:text-[#6A961F] transition duration-300 pb-1">
+          Career
+        </a>
+      <span class="absolute left-0 top-0 w-0 h-[2px] bg-[#6A961F] transition-all duration-300 group-hover:w-full"></span>
+      </li>
+
+      <!-- Catalogue -->
+      <div class="relative group">
+          <button class="flex items-center gap-1 text-[#0D3C00] hover:text-[#6A961F] transition duration-300 py-2">
+            Catalogue
+     <i class="ri-arrow-down-s-line"></i>
+          </button>
+
+          <div class="absolute left-0 top-full w-44 bg-white shadow-lg rounded-md
+opacity-0 invisible group-hover:opacity-100 group-hover:visible
+transition duration-300 z-50">
+            <a href="../pdf/sample_catalogue.pdf" class="block px-4 py-2 hover:bg-gray-100">Gujarati</a>
+            <a href="../pdf/sample_catalogue.pdf" class="block px-4 py-2 hover:bg-gray-100">Hindi</a>
+            <a href="../pdf/sample_catalogue.pdf" class="block px-4 py-2 hover:bg-gray-100">English</a>
+          </div>
+        </div>
+
+      <!-- Contact -->
+      <li class="relative group">
+        <a href="/contactus.html" class="text-[#0D3C00] hover:text-[#6A961F] transition duration-300 pb-1">
+          Contact Us
+        </a>
+      <span class="absolute left-0 top-0 w-0 h-[2px] bg-[#6A961F] transition-all duration-300 group-hover:w-full"></span>
+      </li>
+
+      <!-- Search Icon -->
+      <li>
+        <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-[#6A961F] transition">
+          <svg class="w-5 h-5 text-[#0D3C00]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="M21 21l-4.3-4.3"/>
+          </svg>
+        </button>
+      </li>
+    </ul> 
+  </div>
+</nav>
+
+<!-- Right Side Mobile Menu -->
+<div id="mobileMenu"
+     class="fixed top-0 right-0 w-[280px] h-full bg-white shadow-xl
+            transform translate-x-full transition-transform duration-300 z-50 lg:hidden overflow-y-auto">
+
+  <!-- Header -->
+  <div class="flex justify-between items-center p-4 border-b">
+    <img src="../src/logo (2).png" class="w-10">
+    <button id="closeMenu">
+      <i class="ri-close-line text-2xl"></i>
+    </button>
+  </div>
+
+  <ul class="flex flex-col px-6 py-4 text-[15px] font-semibold text-[#0D3C00]">
+
+    <li class="border-b py-3">
+      <a href="/Home.html">HOME</a>
+    </li>
+
+    <li class="border-b py-3">
+      <a href="/aboutus.html">ABOUT US</a>
+    </li>
+
+
+    <!-- PRODUCTS -->
+    <li class="border-b py-3">
+      <div class="flex justify-between items-center cursor-pointer dropdownBtn">
+        PRODUCTS
+        <i class="ri-arrow-down-s-line"></i>
+      </div>
+
+      <ul class="dropdownMenu hidden mt-3 pl-4 space-y-2 text-[14px] font-normal">
+       
+<li><a href="../product/soil.html" class="block px-4 py-2 hover:bg-gray-100">SOIL NUTRIENTS</a></li>
+<li><a href="../product/kit.html" class="block px-4 py-2 hover:bg-gray-100">KIT SERIES</a></li>
+<li><a href="../product/water.html" class="block px-4 py-2 hover:bg-gray-100">WATER SOLUBLE NUTRIENTS</a></li>
+<li><a href="../product/liquid.html" class="block px-4 py-2 hover:bg-gray-100">LIQUID NUTRIENTS</a></li>
+<li><a href="../product/pgp.html" class="block px-4 py-2 hover:bg-gray-100">PGR-PGR-STICKER</a></li>
+<li><a href="../product/bio.html" class="block px-4 py-2 hover:bg-gray-100">BIO FERTILIZER PESTICIDIES</a></li>
+<li><a href="../product/research.html" class="block px-4 py-2 hover:bg-gray-100">RESEARCH AND HYBRID SEEDS</a></li>
+
+      </ul>
+    </li>
+
+
+    <!-- MULTIMEDIA -->
+    <li class="border-b py-3">
+      <div class="flex justify-between items-center cursor-pointer dropdownBtn">
+        MULTIMEDIA
+        <i class="ri-arrow-down-s-line"></i>
+      </div>
+
+      <ul class="dropdownMenu hidden mt-3 pl-4 space-y-2 text-[14px] font-normal">
+        <li><a href="../multimedia/krishi.html">Krishi Gyan</a></li>
+        <li><a href="../multimedia/our.html">Our Activites</a></li>
+      </ul>
+    </li>
+
+
+    <li class="border-b py-3">
+      <a href="/career.html">CAREER</a>
+    </li>
+
+
+    <!-- CATALOGUE -->
+    <li class="border-b py-3">
+      <div class="flex justify-between items-center cursor-pointer dropdownBtn">
+        CATALOGUE
+        <i class="ri-arrow-down-s-line"></i>
+      </div>
+
+      <ul class="dropdownMenu hidden mt-3 pl-4 space-y-2 text-[14px] font-normal">
+        <li><a href="/pdf/sample_catalogue.pdf">Gujarati</a></li>
+        <li><a href="/pdf/sample_catalogue.pdf">Hindi</a></li>
+        <li><a href="/pdf/sample_catalogue.pdf">English</a></li>
+      </ul>
+    </li>
+
+
+    <li class="border-b py-3">
+      <a href="/contactus.html">CONTACT US</a>
+    </li>
+
+  </ul>
+</div>
+<script>
+
+const dropdownBtns = document.querySelectorAll(".dropdownBtn");
+
+dropdownBtns.forEach((btn)=>{
+
+btn.addEventListener("click",()=>{
+
+const menu = btn.nextElementSibling;
+
+menu.classList.toggle("hidden");
+
+});
+
+});
+
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+if(menuBtn){
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.remove("translate-x-full");
+});
+}
+
+if(closeMenu){
+closeMenu.addEventListener("click", () => {
+  mobileMenu.classList.add("translate-x-full");
+});
+}
+
+});
+</script>
+    
+
+
+</body>
+</html>

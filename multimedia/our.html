@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="navbar" class="sticky top-0 z-50"></div>
+
+<script>
+
+fetch("../navbar.html")
+.then(res => res.text())
+.then(data => {
+
+document.getElementById("navbar").innerHTML = data;
+
+
+/* MOBILE MENU OPEN CLOSE */
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+if(menuBtn){
+menuBtn.addEventListener("click", () => {
+mobileMenu.classList.remove("translate-x-full");
+});
+}
+
+if(closeMenu){
+closeMenu.addEventListener("click", () => {
+mobileMenu.classList.add("translate-x-full");
+});
+}
+
+
+/* DROPDOWN MENU */
+
+const dropdownBtns = document.querySelectorAll(".dropdownBtn");
+
+dropdownBtns.forEach(btn => {
+
+btn.addEventListener("click", () => {
+
+const dropdown = btn.nextElementSibling;
+
+dropdown.classList.toggle("hidden");
+
+});
+
+});
+
+});
+
+</script>
+
+<section class="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+
+  <!-- Background Image -->
+  <img 
+    src="../src/farmer_update_header.jpg" 
+    alt="About Banner"
+    class="absolute inset-0 w-full h-full object-cover"
+  >
+
+  <!-- Overlay Layer -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-green-900/60 to-black/50"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+    
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+Our Activities
+    </h1>
+
+    <p class="text-lg md:text-xl font-medium">
+      Home
+    </p>
+  </div>
+</section>
+
+
+<section class="py-16 bg-gray-100">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<!-- Cards -->
+<div id="cardContainer" class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity1.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supercalc-BIo Fertilizer-PSF</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity2.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Chipku-Sticker-spreader-activator</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activiy3.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Challenge-Mix Micronutrients</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity4.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supercalc-blackbold</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity5.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Vinsix-Fertilizer Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity6.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Avval plus-sulphur with Zn technology</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity7.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Zinc-mycorrhiza-mix micronutrient</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity8.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supecalc</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity9.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Blackbold</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity10.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Micro Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity11.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Krushi Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity12.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Drip Kit</div>
+</div>
+
+<!-- COPY THIS CARD 60 TIMES (12 × 5 pages) -->
+</div>
+
+<!-- Cards -->
+<div id="cardContainer" class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity1.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supercalc-BIo Fertilizer-PSF</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity2.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Chipku-Sticker-spreader-activator</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activiy3.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Challenge-Mix Micronutrients</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity4.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supercalc-blackbold</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity5.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Vinsix-Fertilizer Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity6.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Avval plus-sulphur with Zn technology</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity7.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Zinc-mycorrhiza-mix micronutrient</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity8.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supecalc</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity9.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Blackbold</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity10.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Micro Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity11.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Krushi Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity12.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Drip Kit</div>
+</div>
+
+<!-- COPY THIS CARD 60 TIMES (12 × 5 pages) -->
+</div>
+
+<!-- Cards -->
+<div id="cardContainer" class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity1.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supercalc-BIo Fertilizer-PSF</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity2.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Chipku-Sticker-spreader-activator</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activiy3.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Challenge-Mix Micronutrients</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity4.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supercalc-blackbold</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity5.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Vinsix-Fertilizer Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity6.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Avval plus-sulphur with Zn technology</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity7.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Zinc-mycorrhiza-mix micronutrient</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity8.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supecalc</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity9.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Blackbold</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity10.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Micro Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity11.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Krushi Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity12.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Drip Kit</div>
+</div>
+
+<!-- COPY THIS CARD 60 TIMES (12 × 5 pages) -->
+</div>
+
+<!-- Cards -->
+<div id="cardContainer" class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity1.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supercalc-BIo Fertilizer-PSF</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity2.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Chipku-Sticker-spreader-activator</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activiy3.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Challenge-Mix Micronutrients</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity4.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supercalc-blackbold</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity5.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Vinsix-Fertilizer Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity6.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Avval plus-sulphur with Zn technology</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity7.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Zinc-mycorrhiza-mix micronutrient</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity8.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supecalc</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity9.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Blackbold</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity10.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Micro Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity11.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Krushi Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity12.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Drip Kit</div>
+</div>
+
+<!-- COPY THIS CARD 60 TIMES (12 × 5 pages) -->
+</div>
+
+<!-- Cards -->
+<div id="cardContainer" class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity1.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supercalc-BIo Fertilizer-PSF</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity2.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Chipku-Sticker-spreader-activator</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activiy3.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Challenge-Mix Micronutrients</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity4.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supercalc-blackbold</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity5.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Vinsix-Fertilizer Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity6.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Avval plus-sulphur with Zn technology</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity7.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Zinc-mycorrhiza-mix micronutrient</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity8.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Supecalc</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity9.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Blackbold</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity10.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Micro Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity11.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Krushi Kit</div>
+</div>
+
+<!-- Example Card -->
+<div class="card bg-white shadow">
+<img src="/src/activity12.jpg" class="w-full h-72 object-cover">
+<div class="bg-[#0D3C00] text-white p-3">Drip Kit</div>
+</div>
+
+<!-- COPY THIS CARD 60 TIMES (12 × 5 pages) -->
+</div>
+
+
+
+<div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-8 md:mt-12">
+
+  <!-- Previous -->
+  <button id="prevBtn"
+    class="px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 
+    bg-green-700 text-white text-sm sm:text-base
+    rounded-full hidden">
+    Previous
+  </button>
+
+  <!-- Page Numbers -->
+  <div id="pagination" class="flex flex-wrap gap-2 sm:gap-3"></div>
+
+  <!-- Next -->
+  <button id="nextBtn"
+    class="px-4 py-2 sm:px-5 sm:py-2 md:px-8 md:py-3
+    bg-green-700 text-white text-sm sm:text-base
+    rounded-full">
+    Next →
+  </button>
+
+</div>
+
+</div>
+</section>
+<script>
+
+const cards = document.querySelectorAll(".card");
+
+const cardsPerPage = 12;
+const totalPages = 5;
+
+let currentPage = 1;
+
+const pagination = document.getElementById("pagination");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+
+function showPage(page){
+
+cards.forEach((card,index)=>{
+
+if(index >= (page-1)*cardsPerPage && index < page*cardsPerPage){
+card.style.display = "block";
+}else{
+card.style.display = "none";
+}
+
+});
+
+updateButtons();
+
+}
+
+
+function createPagination(){
+
+for(let i=1;i<=totalPages;i++){
+
+const btn = document.createElement("button");
+
+btn.innerText = i;
+
+btn.className =
+"pageBtn w-12 h-12 border rounded-full flex items-center justify-center hover:bg-green-700 hover:text-white transition";
+
+btn.onclick = ()=>{
+
+currentPage = i;
+showPage(currentPage);
+
+};
+
+pagination.appendChild(btn);
+
+}
+
+}
+
+
+function updateButtons(){
+
+const pageBtns = document.querySelectorAll(".pageBtn");
+
+pageBtns.forEach(btn=>{
+btn.classList.remove("bg-green-700","text-white");
+});
+
+pageBtns[currentPage-1].classList.add("bg-green-700","text-white");
+
+prevBtn.style.display = currentPage === 1 ? "none" : "block";
+nextBtn.style.display = currentPage === totalPages ? "none" : "block";
+
+}
+
+
+nextBtn.onclick = ()=>{
+
+if(currentPage < totalPages){
+
+currentPage++;
+showPage(currentPage);
+
+}
+
+};
+
+
+prevBtn.onclick = ()=>{
+
+if(currentPage > 1){
+
+currentPage--;
+showPage(currentPage);
+
+}
+
+};
+
+
+createPagination();
+showPage(currentPage);
+
+</script>
+
+</body>
+</html>
